@@ -1,7 +1,7 @@
 ﻿--INSERT INTO Employee (FirstName, LastName, DepartmentId) VALUES ('Jane', 'Smite', 2);
 --delete from Employee where Id = 4;
 --SELECT FirstName FROM Employee WHERE Id = Id;
---SELECT * FROM Employee;
+SELECT * FROM Employee;
 --SELECT FirstName, LastName FROM Employee;
 --SELECT Id, FirstName, LastName, DepartmentId FROM Employee;
 --SELECT Id, FirstName, LastName, DepartmentId FROM Employee; 

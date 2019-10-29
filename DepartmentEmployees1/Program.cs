@@ -146,15 +146,13 @@ namespace DepartmentsEmployees
         /// <param name="departments">Department data for the report</param>
         public static void PrintDepartmentReport(string title, List<Department> departments)
         {
-            /*
-             * TODO: Complete this method
-             *  For example a report entitled, "All Departments" should look like this:
+            int i = 0;
+            Console.WriteLine(title);
+            foreach (Department department in departments) {
+                
+                Console.WriteLine($"{i++}. {department.DeptName}");
+            };
 
-                All Departments
-                1: Marketing
-                2: Engineering
-                3: Design
-             */
         }
 
         /// <summary>
@@ -169,23 +167,24 @@ namespace DepartmentsEmployees
         /// <param name="employees">Employee data for the report</param>
         public static void PrintEmployeeReport(string title, List<Employee> employees)
         {
-            /*
-             * TODO: Complete this method
-             *  For example a report entitled, "All Employees", should look like this:
+            if (title == "All Employees") {
+                int i = 0;
+                Console.WriteLine(title);
+                foreach (Employee employee in employees)
+                {
+                    Console.WriteLine($"{i++}: {employee.FirstName} {employee.LastName}");
+                };
+            }else
+            {
+                int i = 0;
+                Console.WriteLine(title);
+                foreach (Employee employee in employees)
+                {
+                    Console.WriteLine($"{i++}: {employee.FirstName} {employee.LastName}, Dept: {employee.Department.DeptName}");
+                };
+            }
+            
 
-                All Employees
-                1: Margorie Klingerman
-                2: Sebastian Lefebvre
-                3: Jamal Ross
-
-             *  A report entitled, "All Employees with Departments", should look like this:
-
-                All Employees with Departments
-                1: Margorie Klingerman. Dept: Marketing
-                2: Sebastian Lefebvre. Dept: Engineering
-                3: Jamal Ross. Dept: Design
-
-             */
         }
 
 
